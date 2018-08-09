@@ -1,0 +1,9 @@
+<resources>
+	<string name = "app_name">My App</string>
+	<string name = "search_action">Search</string>
+	<string name = "settings">Settings</string>
+	<string name = "press_the_button">Press the button</string>
+	<string name = "it_s_bencesssss">It\'s BENCESSSSS!!!!!</string>
+	<string name = "favorites">Favorites</string>
+	<string name = "delete">Delete</string>
+</resources>

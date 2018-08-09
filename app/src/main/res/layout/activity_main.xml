@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android = "http://schemas.android.com/apk/res/android"
+	xmlns:app = "http://schemas.android.com/apk/res-auto"
+	xmlns:tools = "http://schemas.android.com/tools"
+	android:layout_width = "match_parent"
+	android:layout_height = "match_parent"
+	android:background="@color/colorPanel"
+	tools:context = ".MainActivity">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id = "@+id/toolbar"
+		style = "@style/ThemeOverlay.MaterialComponents"
+		android:layout_width = "0dp"
+		android:layout_height = "wrap_content"
+		android:background = "@color/colorPrimary"
+		android:elevation = "0dp"
+		android:minHeight = "?attr/actionBarSize"
+		android:theme = "?attr/actionBarTheme"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toStartOf = "parent"
+		app:layout_constraintTop_toTopOf = "parent" />
+
+	<androidx.cardview.widget.CardView
+		android:id = "@+id/material_cardView"
+		android:layout_width = "match_parent"
+		android:layout_height = "350dp"
+		app:cardCornerRadius = "8dp"
+		app:cardElevation = "8dp"
+
+		android:background="@color/colorPanel"
+		app:layout_constraintEnd_toEndOf = "@id/toolbar"
+		app:layout_constraintTop_toBottomOf = "@id/toolbar" >
+
+		<ImageView
+			android:contentDescription="@null"
+			android:layout_width = "match_parent"
+			android:layout_height = "match_parent"
+			android:src="@drawable/beef"
+			android:scaleType="centerCrop"/>
+
+	</androidx.cardview.widget.CardView>
+
+	<View
+		android:id = "@+id/view2"
+		android:layout_width = "match_parent"
+		android:layout_height = "125dp"
+		android:background = "@drawable/drawer_blob"
+		app:layout_constraintBottom_toBottomOf = "@id/material_cardView"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toStartOf = "parent"
+		app:layout_constraintTop_toBottomOf = "@id/material_cardView" />
+
+
+	<TextView
+		style = "@style/TextAppearance.MaterialComponents.Headline1"
+		android:layout_width = "0dp"
+		android:layout_height = "wrap_content"
+		android:layout_marginStart = "32dp"
+		android:layout_marginTop = "32dp"
+		android:layout_marginEnd = "32dp"
+		android:text = "@string/it_s_bencesssss"
+		android:fontFamily="sans-serif-condensed"
+		android:textAlignment = "center"
+		android:textColor = "@color/colorPanel"
+		android:textSize = "28sp"
+		app:layout_constraintBottom_toBottomOf = "@+id/view2"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toStartOf = "parent"
+		app:layout_constraintTop_toBottomOf = "@+id/material_cardView"
+		app:layout_constraintTop_toTopOf = "@+id/view2"
+		app:layout_constraintVertical_bias = "0.7" />
+
+	<com.google.android.material.button.MaterialButton
+		android:id = "@+id/material_btn"
+		style = "@style/Widget.MaterialComponents.Button.IconButton"
+		android:layout_width = "wrap_content"
+		android:layout_height = "wrap_content"
+		android:layout_marginTop = "50dp"
+		android:layout_marginBottom = "200dp"
+		android:text = "@string/press_the_button"
+		android:textColor = "@android:color/white"
+		app:cornerRadius = "16dp"
+		android:elevation="8dp"
+		app:icon = "@android:drawable/stat_notify_sync"
+		app:layout_constraintBottom_toBottomOf = "@+id/coordinator"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toStartOf = "parent"
+		app:layout_constraintTop_toBottomOf = "@id/view2" />
+
+	<androidx.coordinatorlayout.widget.CoordinatorLayout
+		android:id = "@+id/coordinator"
+		android:layout_width = "0dp"
+		android:layout_height = "0dp"
+		app:layout_constraintBottom_toBottomOf = "parent"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toStartOf = "parent"
+		app:layout_constraintTop_toBottomOf = "@id/material_cardView"
+		app:statusBarBackground = "@android:color/transparent"
+		app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior" >
+
+		<com.google.android.material.bottomappbar.BottomAppBar
+			android:id = "@+id/bottom"
+			style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+			android:layout_width = "match_parent"
+			android:layout_height = "wrap_content"
+			android:layout_gravity = "bottom"
+			app:layout_scrollFlags="scroll|enterAlways"
+			app:backgroundTint = "@color/colorPrimary"
+			app:fabAlignmentMode = "center"
+			app:hideOnScroll="true"
+			android:theme="@style/Theme.MaterialComponents"
+			app:popupTheme="@style/ThemeOverlay.MaterialComponents.Dark"/>
+
+		<com.google.android.material.floatingactionbutton.FloatingActionButton
+			android:layout_width = "wrap_content"
+			android:id="@+id/fabby"
+			android:layout_height = "wrap_content"
+			android:src = "@android:drawable/stat_notify_sync"
+			app:backgroundTint = "@color/colorAccent"
+			app:fabSize = "normal"
+			app:layout_anchor = "@id/bottom"
+			app:layout_behavior="@string/fab_transformation_scrim_behavior" />
+	</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

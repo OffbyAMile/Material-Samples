@@ -1,0 +1,8 @@
+<component name="DependencyValidationManager">
+  <state>
+    <option name="SKIP_IMPORT_STATEMENTS" value="true" />
+    <unnamed_scope value="src[app]:com.offbyamilestudios.example.myapp.MainActivity" />
+    <unnamed_scope value="src[app]:com.offbyamilestudios.example.myapp.R" />
+    <deny_rule from_scope="src[app]:com.offbyamilestudios.example.myapp.R" to_scope="src[app]:com.offbyamilestudios.example.myapp.MainActivity" is_deny="true" />
+  </state>
+</component>
